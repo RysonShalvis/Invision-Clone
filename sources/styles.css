@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+/*The header styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    position: fixed;
+    z-index: 10;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+#logo {
+    height: 60px;
+    margin-left: -15px;
+}
+
+.right-side-header {
+    display: flex;
+}
+
+.right-inside-header {
+    margin: auto 20px;
+}
+
+#sign-in:hover {
+    text-decoration: underline;
+}
+
+#sign-up {
+    background-color: rgb(197, 113, 131);
+    padding: 5px 25px;
+    border-radius: 20px;
+
+    
+}
+
+#hamburger-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 12;
+}
+
+.hamburger-inside {
+    width: 20px;
+    height: 1px;
+    background-color: white;
+    margin: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+.drop-down-menu {
+    height: 100%;
+    position: fixed;
+    z-index: 11;
+    right: 0;
+    top: 0;
+    background-color: white;
+    display: none;
+}
+
+.drop-list {
+    list-style-type: none;
+    width: 400px;
+    margin-bottom: 15px;
+    color: black;
+    
+}
+
+.drop-down-menu a {
+    color: black;
+}
+
+#compact-logo img {
+    height: 50px;
+    width: 50px;
+}
+ /* video and stuff on top */
+.video video {
+    max-height: 750px;
+    object-fit: fill;
+    position: absolute;
+}
+
+.slogan-container {
+    font-family: "Helvetica Neue", Arial, sans-serif; 
+    color: white;
+    font-size: 25px;
+    top: 150px;
+    margin: 0px auto;
+    width: 600px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+#slogan {
+    width: 500px;
+    margin: 10px auto;
+}
+
+#after-slogan {
+    margin: 10px auto;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 20px;
+    
+    margin: 10px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+#get-started {
+    background-color: rgb(197, 113, 131);
+    cursor: pointer;
+}
+
+#demo {
+    border-style: solid;
+    transition: .25s;
+    cursor: pointer;
+}
+
+#demo:hover {
+    background-color: white;
+    color: rgb(197, 113, 131);
+    border-color: white
+}
+
+#video-btn {
+    position: relative;
+    margin: 20px auto;
+    border-style: solid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    transition: .25s;
+    cursor: pointer;
+} 
+
+#play-icon {
+    top: 20px;
+    left: 21px;
+    position: relative;
+    height: 0px;
+    width: 0px;
+    border-top: 5px solid transparent;
+    border-left: 10px solid white;
+    border-bottom: 5px solid transparent;
+}
+
+#video-btn:hover {
+    background-color: white;
+}
+/* end of video stuff */
