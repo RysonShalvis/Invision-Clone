@@ -1,16 +1,25 @@
 * {
     margin: 0;
     padding: 0;
+    
+}
+
+.body {
+    position: relative;
+    margin: auto;
+    max-width: 1300px;
 }
 
 body {
     background-color: white;
+    margin: auto;
 }
 /*The header styles */
 
 header {
     display: flex;
     justify-content: space-between;
+    max-width: 1300px;
     width: 100%;
     color: white;
     font-family: "Helvetica Neue", Arial, sans-serif;
@@ -182,6 +191,14 @@ a {
     display: none;
 }
 
+#video {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #x-button {
     position: absolute;
     right: 0;
@@ -203,7 +220,7 @@ a {
 #play-video {
     position: relative;
     height: 400px;
-    top: 250px;
-    left: 120px;
+
+
 }
 /* end of video stuff */
