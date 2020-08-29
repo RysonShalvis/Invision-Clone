@@ -5,7 +5,6 @@
 }
 
 .body {
-    position: relative;
     margin: auto;
     max-width: 1300px;
 }
@@ -32,8 +31,8 @@ a {
     color: white;
 }
 #logo {
-    height: 60px;
-    margin-left: -15px;
+    height: 30px;
+    margin: 15px;
 }
 
 .right-side-header {
@@ -49,7 +48,7 @@ a {
 }
 
 #sign-up {
-    background-color: rgb(197, 113, 131);
+    background-color: rgb(255, 51, 102);
     padding: 5px 25px;
     border-radius: 20px;
 
@@ -101,6 +100,10 @@ a {
     width: 50px;
 }
  /* video and stuff on top */
+
+ 
+
+
 .video video {
     max-height: 750px;
     object-fit: fill;
@@ -139,7 +142,7 @@ a {
 }
 
 #get-started {
-    background-color: rgb(197, 113, 131);
+    background-color: rgb(255, 51, 102);
     cursor: pointer;
 }
 
@@ -151,7 +154,6 @@ a {
 
 #demo:hover {
     background-color: white;
-    color: rgb(197, 113, 131);
     border-color: white
 }
 
@@ -179,6 +181,11 @@ a {
 
 #video-btn:hover {
     background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }
 
 .play-video-container {
