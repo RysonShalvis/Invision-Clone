@@ -36,6 +36,7 @@ hamburgerIcon.addEventListener('click',toggleDropDown);
 const popUpVideo = document.querySelector ('.play-video-container');
 const playButton = document.querySelector('#video-btn');
 const exitButton = document.querySelector('#x-button');
+const playIcon = document.querySelector('#play-icon');
 let goodBye = true;
 function openVideo () {
         popUpVideo.style.display = 'block';
@@ -49,5 +50,14 @@ function closeVideo () {
         goodBye = true;
 }
 
+function changeIconColorToRed () {
+    playIcon.style.borderLeft = '10px solid rgb(255, 51, 102)';
+}
+function changeIconColorToWhite () {
+    playIcon.style.borderLeft = '10px solid white';
+}
+
 playButton.addEventListener('click', openVideo);
 exitButton.addEventListener('click', closeVideo);
+playButton.addEventListener('mouseover', changeIconColorToRed);
+playButton.addEventListener('mouseout', changeIconColorToWhite);

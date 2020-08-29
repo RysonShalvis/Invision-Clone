@@ -155,7 +155,8 @@ a {
 
 #demo:hover {
     background-color: white;
-    border-color: white
+    border-color: white;
+    color: rgb(255, 51, 102);
 }
 
 #video-btn {
