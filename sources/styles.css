@@ -74,8 +74,8 @@ a {
 }
 
 .drop-down-menu {
-    height: 100%;
-    position: fixed;
+    height: 1000px;
+    position: absolute;
     z-index: 11;
     right: 0;
     top: 0;
