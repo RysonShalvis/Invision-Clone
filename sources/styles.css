@@ -99,7 +99,7 @@ a {
     height: 50px;
     width: 50px;
 }
- /* video and stuff on top */
+ /* video and stuff on top of it*/
 
  
 
@@ -129,6 +129,7 @@ a {
 
 #after-slogan {
     margin: 10px auto;
+    font-size: 20px;
 }
 
 .btn {
