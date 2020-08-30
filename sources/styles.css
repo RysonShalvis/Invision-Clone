@@ -268,3 +268,55 @@ a {
     height: 25px;
     margin: 20px 40px; 
 }
+/* end company logos */
+
+.cloud-container {
+    margin-top: 500px;
+    position: relative;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cloud-header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.cloud-header {
+    display: inline-block;
+}
+
+#cloud-period {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    background-color: rgb(255, 51, 102);
+
+}
+
+.cloud-gallery-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px auto 0 auto;
+}
+
+.cloud-image-container {
+    display: flex;
+    font-size: 27px;
+    margin: 50px auto;
+}
+
+.cloud-image {
+    height: 400px;
+}
+
+.cloud-text-container {
+    width: 300px;
+}
