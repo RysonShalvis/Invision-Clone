@@ -74,12 +74,28 @@ a {
 
 .drop-down-menu {
     height: 1000px;
+    width: 0px;
     position: absolute;
     z-index: 11;
     right: 0;
     top: -9px;
     background-color: white;
-    display: none;
+}
+
+.drop-down-animation {
+    display: block;
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+    width: 500px;
+    transition: all .25s ease-in-out;
+}
+
+.drop-down-animation-gone {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+
+    width: 0px;
+    transition: all .25s ease-in-out;
 }
 
 .drop-list {

@@ -3,29 +3,33 @@ const hamburgerIcon = document.querySelector("#hamburger-icon");
 const hamburgerInside1 = document.querySelector(".ham");
 const hamburgerInside2 = hamburgerInside1.nextElementSibling;
 const hamburgerInside3 = hamburgerInside2.nextElementSibling;
-
+const hamburgers = document.querySelectorAll('.ham')
 let hello = true;
 function toggleDropDown () {
     console.log('hello');
     // checking if hello is true will fix the bug thats clicking twice
     if (hello === true) {
-        dropDown.style.display = 'block';
+        
         hamburgerInside1.style.backgroundColor = 'black';
         hamburgerInside2.style.backgroundColor = 'black';
         hamburgerInside3.style.backgroundColor = 'black';
         hamburgerInside1.style.borderColor = 'black';
         hamburgerInside2.style.borderColor = 'black';
         hamburgerInside3.style.borderColor = 'black';
+        dropDown.classList.add('drop-down-animation')
+        dropDown.classList.remove('drop-down-animation-gone')
         hello = false;
      }
     else {
-        dropDown.style.display = 'none';
+        
         hamburgerInside1.style.backgroundColor = 'white';
         hamburgerInside2.style.backgroundColor = 'white';
         hamburgerInside3.style.backgroundColor = 'white';
         hamburgerInside1.style.borderColor = 'white';
         hamburgerInside2.style.borderColor = 'white';
         hamburgerInside3.style.borderColor = 'white';
+        dropDown.classList.remove('drop-down-animation')
+        dropDown.classList.add('drop-down-animation-gone')
         hello = true;
     }
 };
