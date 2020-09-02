@@ -61,3 +61,15 @@ playButton.addEventListener('click', openVideo);
 exitButton.addEventListener('click', closeVideo);
 playButton.addEventListener('mouseover', changeIconColorToRed);
 playButton.addEventListener('mouseout', changeIconColorToWhite);
+
+let backgroundVideo = document.querySelector('#background-video');
+backgroundVideo.playbackRate = 1;
+
+backgroundVideo.addEventListener('timeupdate', function(){
+    if(backgroundVideo.currentTime > backgroundVideo.duration * .26){
+        // Reset the backgroundVideo to 0
+        backgroundVideo.currentTime = 0;
+        // And play again
+        backgroundVideo.play();
+    }
+  });
