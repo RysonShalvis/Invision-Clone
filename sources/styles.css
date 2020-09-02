@@ -18,11 +18,14 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 70px;
     width: 100%;
     color: white;
     font-family: "Helvetica Neue", Arial, sans-serif;
     position: fixed;
     z-index: 10;
+    top: 0;
 }
 
 a {
@@ -31,7 +34,8 @@ a {
 }
 #logo {
     height: 30px;
-    margin: auto 15px;
+    margin: 15px;
+    
 }
 
 .right-side-header {
@@ -52,6 +56,11 @@ a {
     border-radius: 20px;
 
     
+}
+
+.header-animation {
+    background-color: white !important;
+    transition: all 2s ease;
 }
 
 #hamburger-icon {

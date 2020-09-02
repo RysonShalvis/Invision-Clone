@@ -77,3 +77,30 @@ backgroundVideo.addEventListener('timeupdate', function(){
         backgroundVideo.play();
     }
   });
+const header = document.querySelector('header');
+const bodyElement = document.querySelector('body');
+const signIn = document.querySelector('#sign-in a');
+function changeCssOnScroll () { 
+    if (this.scrollY > 175) {
+        header.style.backgroundColor = 'white';
+        signIn.style.color = 'black';
+        hamburgerInside1.style.backgroundColor = 'black';
+        hamburgerInside2.style.backgroundColor = 'black';
+        hamburgerInside3.style.backgroundColor = 'black';
+        hamburgerInside1.style.borderColor = 'black';
+        hamburgerInside2.style.borderColor = 'black';
+        hamburgerInside3.style.borderColor = 'black';
+    } else {
+        header.style.backgroundColor = '';
+        signIn.style.color = 'white';
+        hamburgerInside1.style.backgroundColor = 'white';
+        hamburgerInside2.style.backgroundColor = 'white';
+        hamburgerInside3.style.backgroundColor = 'white';
+        hamburgerInside1.style.borderColor = 'white';
+        hamburgerInside2.style.borderColor = 'white';
+        hamburgerInside3.style.borderColor = 'white';
+    }
+}
+
+window.addEventListener('scroll',changeCssOnScroll);
+header.classList.add('.header-animation');
