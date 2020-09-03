@@ -26,7 +26,7 @@ header {
     position: fixed;
     z-index: 10;
     top: 0;
-    transition: all 2s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 a {
@@ -160,7 +160,7 @@ a {
 }
 
 .slogan-container {
-    font-family: "Helvetica Neue", Arial, sans-serif; 
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
     color: white;
     font-size: 18px;
     top: 200px;
@@ -172,9 +172,9 @@ a {
 }
 
 #slogan {
-    width: 500px;
+    width: 350px;
     margin: 10px auto;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #after-slogan {
@@ -341,8 +341,81 @@ a {
 
 .cloud-image {
     height: 400px;
+    margin-right: 15px;
 }
 
 .cloud-text-container {
-    width: 300px;
+    width: 305px;
+    font-family: "Aktiv Grotesk", -apple-system, system-ui,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+    font-size: 25px;
+}
+
+
+
+.text-images {
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+#red-square {
+    background-color: rgb(255, 51, 102);
+    height: 30px;
+    width: 30px;
+    border-style: none;
+}
+
+#white-square {
+    background-color: white;
+    height: 7px;
+    width: 7px;
+    position: relative;
+    top: 19px;
+    left: 19px;
+}
+
+.text-images img {
+    height: 33px;
+    margin-left: 5px;
+}
+
+
+#diamond-container {
+    height: 50px;
+    width: 50px;
+}
+
+#orange-diamond {
+    object-fit: cover;
+    object-position: -15px;
+    
+}
+
+.cloud-text-container p {
+    font-size: 22px;
+}
+
+.frank-quote {
+    display: flex;
+    margin-top: 10px;
+}
+
+#frank-yoo-actual-quote {
+    color: grey;
+}
+
+.frank-quote img {
+    
+    margin-right: 30px;
+    height: 60px;
+}
+
+.frank-text h4 {
+    font-size: 20px;
+}
+
+#head-of-product-design {
+    color: grey;
 }
