@@ -4,11 +4,11 @@ const hamburgerInside1 = document.querySelector(".ham");
 const hamburgerInside2 = hamburgerInside1.nextElementSibling;
 const hamburgerInside3 = hamburgerInside2.nextElementSibling;
 const hamburgers = document.querySelectorAll('.ham')
-let hello = true;
+let menuActive = false;
 function toggleDropDown () {
-    console.log('hello');
+    menuActive = !menuActive
     // checking if hello is true will fix the bug thats clicking twice
-    if (hello === true) {
+    if ( menuActive ) {
         
         hamburgerInside1.style.backgroundColor = 'black';
         hamburgerInside2.style.backgroundColor = 'black';
@@ -18,7 +18,6 @@ function toggleDropDown () {
         hamburgerInside3.style.borderColor = 'black';
         dropDown.classList.add('drop-down-animation')
         dropDown.classList.remove('drop-down-animation-gone')
-        hello = false;
      }
     else {
         
@@ -30,7 +29,6 @@ function toggleDropDown () {
         hamburgerInside3.style.borderColor = 'white';
         dropDown.classList.remove('drop-down-animation')
         dropDown.classList.add('drop-down-animation-gone')
-        hello = true;
     }
 };
 
@@ -77,7 +75,7 @@ backgroundVideo.addEventListener('timeupdate', function(){
         backgroundVideo.play();
     }
   });
-const header = document.querySelector('header');
+const header = document.querySelector('header')
 const bodyElement = document.querySelector('body');
 const signIn = document.querySelector('#sign-in a');
 function changeCssOnScroll () { 
@@ -90,15 +88,17 @@ function changeCssOnScroll () {
         hamburgerInside1.style.borderColor = 'black';
         hamburgerInside2.style.borderColor = 'black';
         hamburgerInside3.style.borderColor = 'black';
-    } else {
+    } else if (this.scrollY <= 175) {
         header.style.backgroundColor = '';
         signIn.style.color = 'white';
+        if (!menuActive) {
         hamburgerInside1.style.backgroundColor = 'white';
         hamburgerInside2.style.backgroundColor = 'white';
         hamburgerInside3.style.backgroundColor = 'white';
         hamburgerInside1.style.borderColor = 'white';
         hamburgerInside2.style.borderColor = 'white';
-        hamburgerInside3.style.borderColor = 'white';
+        hamburgerInside3.style.borderColor = 'white'; 
+        }
     }
 }
 
