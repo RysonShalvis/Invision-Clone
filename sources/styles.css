@@ -358,7 +358,11 @@ a {
     bottom: 50px;
 }
 
-
+#lyft {
+    height: 50px;
+    position: relative; 
+    bottom: 10px;
+}
 
 .text-images {
     display: flex;
@@ -409,7 +413,8 @@ a {
 }
 
 .cloud-actual-quote {
-    color: grey;
+    color: rgb(74, 78, 87);
+    margin-bottom: 50px;
 }
 
 .frank-quote img {
@@ -425,8 +430,8 @@ a {
 }
 
 #head-of-product-design {
-    color: grey;
-    font-weight: 400;
+    color: rgb(159,161,167);
+    font-weight: 500;
 }
 
 #erh-mrs-photo {
