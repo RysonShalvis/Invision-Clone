@@ -342,6 +342,7 @@ a {
 .cloud-image {
     height: 400px;
     margin-right: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 0px 1px;
 }
 
 .cloud-text-container {
@@ -350,6 +351,8 @@ a {
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, sans-serif;
     font-size: 25px;
+    position: relative;
+    bottom: 50px;
 }
 
 
@@ -402,7 +405,7 @@ a {
     margin-top: 10px;
 }
 
-#frank-yoo-actual-quote {
+.frank-yoo-actual-quote {
     color: grey;
 }
 
@@ -418,4 +421,24 @@ a {
 
 #head-of-product-design {
     color: grey;
+}
+
+#erh-mrs-photo {
+    height: 300px;
+
+}
+
+#andy-netflix-photo {
+    height: 20px;
+    border-style: none;
+}
+
+#learn-more {
+    color: rgb(255, 51, 102);
+    text-decoration-line: underline;
+    text-decoration-color: rgb(255, 51, 102);
+}
+
+#eventbrite {
+    height: 30px;
 }
