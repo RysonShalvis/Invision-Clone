@@ -503,13 +503,13 @@ a {
 }
 
 .studio-video-marker {
+    margin-top: 100px;
     height: 5px;
     width: 200px;
-    background-color: grey;
+    background-color: rgb(159,161,167);
     cursor: pointer;
     position: relative;
     z-index: 1;
-
 }
 
 
@@ -519,11 +519,38 @@ a {
     background-color: red;
     transition: width 15s ;
     cursor: pointer;
-    position: absolute;
-    bottom: -4295px;
+    position: relative;
     z-index: 2;
+    bottom: 5px;
 }
 
 .studio-video-marker-red:hover {
     width: 200px;
 }
+
+.studio-video-controls {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.studio {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+}
+
+.studio-content {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.icon {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.studio h3 {
+    margin-bottom: 30px;
+}
+
