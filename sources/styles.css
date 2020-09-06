@@ -473,3 +473,57 @@ a {
 #wework-logo {
     height: 25px;
 }
+/* end cloud stuff */
+
+.studio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.studio-video-text {
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.left-studio {
+    display: flex;
+
+}
+
+.left-studio img {
+    height: 40px;
+}
+
+.studio-video-container video {
+    width: 100%;
+}
+
+.studio-video-marker {
+    height: 5px;
+    width: 200px;
+    background-color: grey;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+}
+
+
+.studio-video-marker-red {
+    height: 5px;
+    width: 1px;
+    background-color: red;
+    transition: width 15s ;
+    cursor: pointer;
+    position: absolute;
+    bottom: -4295px;
+    z-index: 2;
+}
+
+.studio-video-marker-red:hover {
+    width: 200px;
+}
