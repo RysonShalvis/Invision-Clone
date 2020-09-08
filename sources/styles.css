@@ -516,12 +516,22 @@ a {
 .studio-video-marker-red {
     height: 5px;
     width: 1px;
-    background-color: red;
-    transition: width 15s ;
+    background-color: rgb(255, 51, 102);
+    transition: width 30s;
     cursor: pointer;
     position: relative;
     z-index: 2;
     bottom: 5px;
+}
+
+.animate-marker {
+    animation: videoMarker 31s 1;
+}
+
+@keyframes videoMarker {
+    0% {width: 1px }
+    97% {width: 200px}
+    100% {width: 0px}
 }
 
 .studio-video-marker-red:hover {
@@ -537,12 +547,18 @@ a {
     display: flex;
     flex-direction: column;
     width: 200px;
+    position: relative;
+    transition: all 1s ease;
+}
 
+.studio:hover {
+    bottom: 20px;
 }
 
 .studio-content {
     margin-top: 30px;
     text-align: left;
+    pointer-events: none;
 }
 
 .icon {

@@ -3,7 +3,10 @@ const hamburgerIcon = document.querySelector("#hamburger-icon");
 const hamburgerInside1 = document.querySelector(".ham");
 const hamburgerInside2 = hamburgerInside1.nextElementSibling;
 const hamburgerInside3 = hamburgerInside2.nextElementSibling;
-const hamburgers = document.querySelectorAll('.ham')
+const hamburgers = document.querySelectorAll('.ham');
+const studioVideo = document.querySelector('#studio-video');
+const videoMarker = document.getElementsByClassName('studio-video-marker-red');
+const videoControls = document.getElementsByClassName('studio');
 let menuActive = false;
 function toggleDropDown () {
     menuActive = !menuActive
@@ -104,3 +107,70 @@ function changeCssOnScroll () {
 
 window.addEventListener('scroll',changeCssOnScroll);
 header.classList.add('.header-animation');
+
+
+function animateSlider () {
+    if (studioVideo.currentTime > 0 && studioVideo.currentTime < 31) {
+        videoMarker[0].classList.add('animate-marker');
+        videoMarker[2].classList.remove('animate-marker');
+        videoMarker[1].classList.remove('animate-marker');
+        videoControls[0].style.bottom = '20px';
+        videoControls[1].style.bottom = '';
+        videoControls[2].style.bottom = '';
+        
+    } 
+    else if (studioVideo.currentTime >= 31 && studioVideo.currentTime < 61) {
+        videoMarker[1].classList.add('animate-marker');
+        videoMarker[0].classList.remove('animate-marker');
+        videoMarker[2].classList.remove('animate-marker');
+        videoControls[1].style.bottom = '20px';
+        videoControls[0].style.bottom = '';
+        videoControls[2].style.bottom = '';
+    }
+    else if (studioVideo.currentTime >= 61) {
+        videoMarker[2].classList.add('animate-marker');
+        videoMarker[1].classList.remove('animate-marker');
+        videoMarker[0].classList.remove('animate-marker');
+        videoControls[2].style.bottom = '20px';
+        videoControls[0].style.bottom = '';
+        videoControls[1].style.bottom = '';
+        
+    }
+}
+function changeTimeOnVideoToZero () {
+    videoControls[0].style.bottom = '20px';
+    videoControls[1].style.bottom = '';
+    videoControls[2].style.bottom = '';
+    videoMarker[0].classList.add('animate-marker');
+    videoMarker[2].classList.remove('animate-marker');
+    videoMarker[1].classList.remove('animate-marker');
+        studioVideo.currentTime = 0;
+        console.log('first one is clicked');
+}
+
+function changeTimeOnVideoToThirty () {
+    console.log('second one is clicked')
+        videoControls[1].style.bottom = '20px';
+        videoControls[0].style.bottom = '';
+        videoControls[2].style.bottom = '';
+        studioVideo.currentTime = 31;
+        videoMarker[1].classList.add('animate-marker');
+        videoMarker[0].classList.remove('animate-marker');
+        videoMarker[2].classList.remove('animate-marker');
+}
+
+function changeTimeOnVideoToSixty () {
+    console.log('third one is clicked')
+    videoControls[2].style.bottom = '20px';
+    videoControls[0].style.bottom = '';
+    videoControls[1].style.bottom = '';
+        studioVideo.currentTime = 61;
+        videoMarker[2].classList.add('animate-marker');
+        videoMarker[1].classList.remove('animate-marker');
+        videoMarker[0].classList.remove('animate-marker');
+}
+
+studioVideo.addEventListener('timeupdate', animateSlider);
+videoControls[0].addEventListener('click',changeTimeOnVideoToZero);
+videoControls[1].addEventListener('click',changeTimeOnVideoToThirty);
+videoControls[2].addEventListener('click',changeTimeOnVideoToSixty);
