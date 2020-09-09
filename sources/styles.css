@@ -550,9 +550,12 @@ a {
     position: relative;
     transition: all 1s ease;
 }
-
+@keyframes studioHover {
+    from {bottom: 0}
+    to {bottom: 20px}
+}
 .studio:hover {
-    bottom: 20px;
+    animation: studioHover .5s forwards;
 }
 
 .studio-content {
