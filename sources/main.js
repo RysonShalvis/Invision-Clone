@@ -7,6 +7,9 @@ const hamburgers = document.querySelectorAll('.ham');
 const studioVideo = document.querySelector('#studio-video');
 const videoMarker = document.getElementsByClassName('studio-video-marker-red');
 const videoControls = document.getElementsByClassName('studio');
+const dsmVideo = document.querySelector('#dsm-video');
+const DSMVideoControls = document.getElementsByClassName('dsm');
+const dsmVideoMarker = document.getElementsByClassName('dsm-video-marker-red');
 let menuActive = false;
 function toggleDropDown () {
     menuActive = !menuActive
@@ -174,3 +177,77 @@ studioVideo.addEventListener('timeupdate', animateSlider);
 videoControls[0].addEventListener('click',changeTimeOnVideoToZero);
 videoControls[1].addEventListener('click',changeTimeOnVideoToThirty);
 videoControls[2].addEventListener('click',changeTimeOnVideoToSixty);
+
+
+//end studio video controls
+
+
+function dsmAnimateSlider () {
+    if (dsmVideo.currentTime > 0 && dsmVideo.currentTime < 6) {
+        dsmVideoMarker[0].classList.add('dsm-animate-marker');
+        dsmVideoMarker[2].classList.remove('dsm-animate-marker');
+        dsmVideoMarker[1].classList.remove('dsm-animate-marker');
+        DSMVideoControls[0].style.bottom = '20px';
+        DSMVideoControls[1].style.bottom = '';
+        DSMVideoControls[2].style.bottom = '';
+        
+    } 
+    else if (dsmVideo.currentTime >= 6 && dsmVideo.currentTime < 11) {
+        dsmVideoMarker[1].classList.add('dsm-animate-marker');
+        dsmVideoMarker[0].classList.remove('dsm-animate-marker');
+        dsmVideoMarker[2].classList.remove('dsm-animate-marker');
+        DSMVideoControls[1].style.bottom = '20px';
+        DSMVideoControls[0].style.bottom = '';
+        DSMVideoControls[2].style.bottom = '';
+    }
+    else if (dsmVideo.currentTime >= 11) {
+        dsmVideoMarker[2].classList.add('dsm-animate-marker');
+        dsmVideoMarker[1].classList.remove('dsm-animate-marker');
+        dsmVideoMarker[0].classList.remove('dsm-animate-marker');
+        DSMVideoControls[2].style.bottom = '20px';
+        DSMVideoControls[0].style.bottom = '';
+        DSMVideoControls[1].style.bottom = '';
+        
+    }
+}
+function dsmChangeTimeOnVideoToZero () {
+    console.log(dsmVideo.currentTime)
+    DSMVideoControls[0].style.bottom = '20px';
+    DSMVideoControls[1].style.bottom = '';
+    DSMVideoControls[2].style.bottom = '';
+    console.log(dsmVideo.currentTime)
+    dsmVideoMarker[0].classList.add('dsm-animate-marker');
+    dsmVideoMarker[2].classList.remove('dsm-animate-marker');
+    dsmVideoMarker[1].classList.remove('dsm-animate-marker');
+        dsmVideo.currentTime = 0;
+        console.log('first one is clicked');
+}
+
+function dsmChangeTimeOnVideoToThirty () {
+    console.log('second one is clicked')
+        DSMVideoControls[1].style.bottom = '20px';
+        DSMVideoControls[0].style.bottom = '';
+        DSMVideoControls[2].style.bottom = '';
+        dsmVideo.currentTime = 6;
+        console.log(dsmVideo.currentTime)
+        dsmVideoMarker[1].classList.add('dsm-animate-marker');
+        dsmVideoMarker[0].classList.remove('dsm-animate-marker');
+        dsmVideoMarker[2].classList.remove('dsm-animate-marker');
+}
+
+function dsmChangeTimeOnVideoToSixty () {
+    console.log('third one is clicked')
+    console.log(dsmVideo.currentTime)
+    DSMVideoControls[2].style.bottom = '20px';
+    DSMVideoControls[0].style.bottom = '';
+    DSMVideoControls[1].style.bottom = '';
+        dsmVideo.currentTime = 11;
+        dsmVideoMarker[2].classList.add('dsm-animate-marker');
+        dsmVideoMarker[1].classList.remove('dsm-animate-marker');
+        dsmVideoMarker[0].classList.remove('dsm-animate-marker');
+}
+
+dsmVideo.addEventListener('timeupdate', dsmAnimateSlider);
+DSMVideoControls[0].addEventListener('click',dsmChangeTimeOnVideoToZero);
+DSMVideoControls[1].addEventListener('click',dsmChangeTimeOnVideoToThirty);
+DSMVideoControls[2].addEventListener('click',dsmChangeTimeOnVideoToSixty);

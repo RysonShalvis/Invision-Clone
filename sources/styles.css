@@ -513,7 +513,7 @@ a {
 }
 
 
-.studio-video-marker-red {
+.studio-video-marker-red, .dsm-video-marker-red {
     height: 5px;
     width: 1px;
     background-color: rgb(255, 51, 102);
@@ -528,22 +528,24 @@ a {
     animation: videoMarker 31s 1;
 }
 
+.dsm-animate-marker {
+    animation: videoMarker 11s 1;
+}
+
 @keyframes videoMarker {
     0% {width: 1px }
     97% {width: 200px}
     100% {width: 0px}
 }
 
-.studio-video-marker-red:hover {
-    width: 200px;
-}
 
-.studio-video-controls {
+
+.studio-video-controls, .dsm-video-controls {
     display: flex;
     justify-content: space-evenly;
 }
 
-.studio {
+.studio, .dsm {
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -554,7 +556,7 @@ a {
     from {bottom: 0}
     to {bottom: 20px}
 }
-.studio:hover {
+.studio:hover, .dsm:hover {
     animation: studioHover .5s forwards;
 }
 
