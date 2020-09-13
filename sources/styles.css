@@ -529,13 +529,13 @@ a {
 }
 
 .dsm-animate-marker {
-    animation: videoMarker 11s 1;
+    animation: videoMarker 5s 1;
 }
 
 @keyframes videoMarker {
     0% {width: 1px }
-    97% {width: 200px}
-    100% {width: 0px}
+    97% {width: 200px; left: 0}
+    100% {width: 0px; left: 200px}
 }
 
 
@@ -550,7 +550,7 @@ a {
     flex-direction: column;
     width: 200px;
     position: relative;
-    transition: all 1s ease;
+    transition: all 1s;
 }
 @keyframes studioHover {
     from {bottom: 0}
@@ -575,3 +575,9 @@ a {
     margin-bottom: 30px;
 }
 
+.design-conversation-container {
+    font-size: 1.5rem;
+    width: 75%;
+    margin: 100px auto;
+    text-align: center;
+}
