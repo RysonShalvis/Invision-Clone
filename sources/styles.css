@@ -584,26 +584,50 @@ a {
 
 .companies-scroll-images {
     width: 90%;
-    margin: 50px auto;
+    margin: 150px auto;
     text-align: center;
     vertical-align: middle;
 }
 
 .companies-scroll-image-column {
+    position: relative;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    height: 100px;
-    width: 100px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px,
-     rgba(0, 0, 0, 0.2) 0px 0px 1px;
-    margin: 10px 20px;
+    
+    
+    margin: 10px;
+  
 }
 
 .scroll-image-container {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 20px,
+     rgba(0, 0, 0, 0.2) 0px 0px 1px;
+    position: relative;
     margin: 20px;
+    height: 100px;
+    width: 100px;
 }
 
 .scroll-image-container img {
     height: 50px;
+}
+
+#invision-image-container {
+    box-shadow: none ;
+}
+
+#invision-image {
+    height: 100%;
+    
+}
+
+.column-3 {
+    bottom: 100px;
+    z-index: 10;
+}
+
+.column-5, .column-1 {
+    top: 50px;
+
 }
