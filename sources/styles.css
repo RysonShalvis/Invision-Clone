@@ -288,9 +288,15 @@ a {
 
 .company-container {
     position: relative;
-    margin-top: 20%;
+    margin-top: 27%;
     display: flex;
     justify-content: space-evenly;
+}
+
+@media screen and (max-height: 1150px) {
+    .company-container {
+        margin-top: 20%;
+    }
 }
 
 .company-image {
